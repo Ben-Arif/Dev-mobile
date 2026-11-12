@@ -22,13 +22,6 @@ class acceuil : AppCompatActivity() {
             v.setPadding(bars.left, bars.top, bars.right, bars.bottom)
             insets
         }
-        val etSearch = findViewById<EditText>(R.id.etSearch)
-        val btnSearch = findViewById<Button>(R.id.btnSearch)
-
-        btnSearch.setOnClickListener {
-            val q = etSearch.text.toString().trim()
-            if (q.isNotEmpty()) toast("Recherche : $q")  // TODO: écran résultats
-        }
         mapOf(
             R.id.catEbooks to "E-Books",
             R.id.catCategories to "Categories",

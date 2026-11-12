@@ -38,12 +38,12 @@ class register : AppCompatActivity() {
             val confirm = etConfirm.text.toString()
 
             when {
-                name.isEmpty() -> etName.error = "Nom obligatoire"
-                !Patterns.EMAIL_ADDRESS.matcher(email).matches() -> etEmail.error = "Email invalide"
-                password.length < 6 -> etPassword.error = "6 caractères minimum"
-                password != confirm -> etConfirm.error = "Les mots de passe ne correspondent pas"
+                name.isEmpty() -> etName.error = "Name obligated"
+                !Patterns.EMAIL_ADDRESS.matcher(email).matches() -> etEmail.error = "Invalid Email"
+                password.length < 6 -> etPassword.error = "Minimum 6 Caracters"
+                password != confirm -> etConfirm.error = "Paswword is not defined"
                 else -> {
-                    Toast.makeText(this, "Compte créé avec succès", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Account Created", Toast.LENGTH_SHORT).show()
                     startActivity(Intent(this, login::class.java))
                     finish()
                 }

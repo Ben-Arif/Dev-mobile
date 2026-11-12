@@ -39,7 +39,7 @@ class login : AppCompatActivity() {
                 return@setOnClickListener
             }
             if (password.length < 6) {
-                etPassword.error = "6 caractères minimum"
+                etPassword.error = "at last 6 caractères minimum"
                 return@setOnClickListener
             }
             startActivity(Intent(this, acceuil::class.java))
@@ -55,7 +55,7 @@ class login : AppCompatActivity() {
         }
 
         tvForgot.setOnClickListener {
-            Toast.makeText(this, "Bientôt disponible", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Coming Soon", Toast.LENGTH_SHORT).show()
         }
     }
 }
