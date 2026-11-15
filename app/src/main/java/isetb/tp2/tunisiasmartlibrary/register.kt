@@ -29,7 +29,7 @@ class register : AppCompatActivity() {
         val etConfirm = findViewById<EditText>(R.id.etConfirm)
         val btnRegister = findViewById<Button>(R.id.btnRegister)
         val tvGoLogin = findViewById<TextView>(R.id.tvGoLogin)
-        val btn_retour= findViewById<Button>(R.id.btn_retour)
+        val btn_retour = findViewById<TextView>(R.id.btn_retour)
 
         btnRegister.setOnClickListener {
             val name = etName.text.toString().trim()

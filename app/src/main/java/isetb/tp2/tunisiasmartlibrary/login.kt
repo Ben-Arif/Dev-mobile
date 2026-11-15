@@ -28,7 +28,7 @@ class login : AppCompatActivity() {
         val btnLogin = findViewById<Button>(R.id.btnLogin)
         val tvGoRegister = findViewById<TextView>(R.id.tvGoRegister)
         val tvForgot = findViewById<TextView>(R.id.tvForgot)
-        val btn_retour= findViewById<Button>(R.id.btn_retour)
+        val btn_retour = findViewById<TextView>(R.id.btn_retour)
 
         btnLogin.setOnClickListener {
             val email = etEmail.text.toString().trim()

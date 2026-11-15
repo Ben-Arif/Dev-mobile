@@ -22,16 +22,24 @@
             android:orientation="vertical"
             android:padding="24dp">
 
-            <LinearLayout
+            <!-- Header: Back button a gauche, avatar au centre -->
+            <FrameLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:orientation="horizontal">
+                android:layout_height="wrap_content">
 
-                <Button
+                <TextView
                     android:id="@+id/btn_retour"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="  Back" />
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_gravity="start|center_vertical"
+                    android:background="@drawable/bg_back_btn"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:text="←"
+                    android:textColor="@color/navy"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:layout_width="72dp"
@@ -41,7 +49,7 @@
                     android:gravity="center"
                     android:text="👤"
                     android:textSize="30sp" />
-            </LinearLayout>
+            </FrameLayout>
 
             <TextView
                 android:layout_width="wrap_content"
