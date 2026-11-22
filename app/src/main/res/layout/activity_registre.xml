@@ -72,12 +72,31 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="24dp"
-                android:text="Full Name"
+                android:text="First Name"
                 android:textColor="@color/navy"
                 android:textStyle="bold" />
 
             <EditText
-                android:id="@+id/etName"
+                android:id="@+id/etFName"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="6dp"
+                android:background="@drawable/bg_input"
+                android:hint="John Doe"
+                android:inputType="textPersonName"
+                android:paddingHorizontal="14dp"
+                android:textSize="14sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="last Name"
+                android:textColor="@color/navy"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/etLName"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginTop="6dp"
