@@ -139,24 +139,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="52dp"
-                            android:layout_height="52dp"
-                            android:background="@drawable/bg_circle_white"
-                            android:gravity="center"
-                            android:text="🗂️"
-                            android:textSize="20sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="6dp"
-                            android:text="Categories"
-                            android:textColor="@color/navy"
-                            android:textSize="11sp" />
-                    </LinearLayout>
+                        android:orientation="vertical"/>
 
                     <LinearLayout
                         android:id="@+id/catAudio"
@@ -164,24 +147,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
-                        android:orientation="vertical">
-
-                        <TextView
-                            android:layout_width="52dp"
-                            android:layout_height="52dp"
-                            android:background="@drawable/bg_circle_white"
-                            android:gravity="center"
-                            android:text="🎧"
-                            android:textSize="20sp" />
-
-                        <TextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_marginTop="6dp"
-                            android:text="Audio"
-                            android:textColor="@color/navy"
-                            android:textSize="11sp" />
-                    </LinearLayout>
+                        android:orientation="vertical"/>
 
                     <LinearLayout
                         android:id="@+id/catNovels"
@@ -261,54 +227,6 @@
             </RelativeLayout>
 
             <!-- Book card placeholder -->
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:background="@drawable/bg_card"
-                android:orientation="horizontal"
-                android:padding="14dp">
-
-                <TextView
-                    android:layout_width="70dp"
-                    android:layout_height="100dp"
-                    android:background="@drawable/bg_input"
-                    android:gravity="center"
-                    android:text="Cover" />
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="14dp"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Book title"
-                        android:textColor="@color/navy"
-                        android:textSize="16sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="⭐ 4.6 (128)"
-                        android:textColor="@color/gold"
-                        android:textStyle="bold" />
-
-                    <Button
-                        android:layout_width="wrap_content"
-                        android:layout_height="40dp"
-                        android:layout_marginTop="12dp"
-                        android:background="@drawable/bg_btn_navy"
-                        android:paddingHorizontal="20dp"
-                        android:text="Read"
-                        android:textAllCaps="false"
-                        android:textColor="@android:color/white" />
-                </LinearLayout>
-            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
@@ -331,6 +249,9 @@
             android:textSize="11sp" />
 
         <TextView
+            android:id="@+id/navDocument"
+            android:clickable="true"
+            android:focusable="true"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"

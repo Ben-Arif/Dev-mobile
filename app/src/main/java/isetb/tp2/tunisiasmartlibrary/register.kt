@@ -18,7 +18,7 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
 class register : AppCompatActivity() {
-    private val BASE_URL = "http://localhost:8081"
+    private val BASE_URL = "http://127.0.0.1:8081"
     val apiService: ApiService by lazy {
         Retrofit.Builder()
             .baseUrl(BASE_URL)
@@ -66,7 +66,7 @@ class register : AppCompatActivity() {
                                 response: Response<LoginRespense?>
                             )
                             {
-                                Log.d("repsonse register", "onResponse: " + response.code())
+                                Log.d("..........repsonse register", "onResponse: " + response.code())
                                 val intent = Intent(this@register, acceuil::class.java)
                                 startActivity(intent)
 

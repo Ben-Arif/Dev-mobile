@@ -2,6 +2,7 @@ package isetb.tp2.tunisiasmartlibrary
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.LinearLayout
@@ -11,6 +12,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import kotlin.jvm.java
 
 class acceuil : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -37,6 +39,9 @@ class acceuil : AppCompatActivity() {
         findViewById<TextView>(R.id.tvregister).setOnClickListener {
             startActivity(Intent(this, register::class.java))
             finish()
+        }
+        findViewById<View>(R.id.navDocument).setOnClickListener {
+            startActivity(Intent(this, DocumentsActivity::class.java))
         }
     }
     private fun toast(msg: String) = Toast.makeText(this, msg, Toast.LENGTH_SHORT).show()
