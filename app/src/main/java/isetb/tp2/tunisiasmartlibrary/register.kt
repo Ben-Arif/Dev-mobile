@@ -19,12 +19,12 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 class register : AppCompatActivity() {
     private val BASE_URL = "http://127.0.0.1:8081"
-    val apiService: ApiService by lazy {
+    val authService: AuthService by lazy {
         Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
             .build()
-            .create(ApiService::class.java)
+            .create(AuthService::class.java)
     }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -59,7 +59,7 @@ class register : AppCompatActivity() {
                 password.length < 6 -> etPassword.error = "Minimum 6 Caracters"
                 password != confirm -> etConfirm.error = "Paswword is not defined"
                 else -> {
-                    apiService.register(RegisterRequest(Fname, Lname, email, password))
+                    authService.register(RegisterRequest(Fname, Lname, email, password))
                         .enqueue(object : retrofit2.Callback<LoginRespense> {
                             override fun onResponse(
                                 call: Call<LoginRespense?>,
