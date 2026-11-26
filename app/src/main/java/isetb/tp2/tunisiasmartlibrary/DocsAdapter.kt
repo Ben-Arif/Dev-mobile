@@ -1,6 +1,5 @@
 package isetb.tp2.tunisiasmartlibrary
 
-import android.net.Uri
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -22,7 +21,7 @@ class DocsAdapter(
         val image = view.findViewById<ImageView>(R.id.img_doc)
         val title = view.findViewById<TextView>(R.id.tv_title_doc)
         val description = view.findViewById<TextView>(R.id.tv_discription_doc)
-        val showMore = view.findViewById<TextView>(R.id.btn_showMore_doc)
+        val showMore = view.findViewById<TextView>(R.id.More)
 
     }
 
@@ -44,7 +43,10 @@ class DocsAdapter(
             .into(holder.image)
 
         holder.title.text = document.title
-        holder.description.text = document.description
+        if (document.description.length > 20)
+            holder.description.text = "${document.description.subSequence(0, 20)}..."
+        else
+            holder.description.text = document.description
 
         holder.showMore.setOnClickListener {
             onItemClick(document.id)

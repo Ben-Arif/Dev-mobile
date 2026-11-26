@@ -3,8 +3,6 @@ package isetb.tp2.tunisiasmartlibrary
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.EditText
 import android.widget.LinearLayout
 import android.widget.TextView
 import android.widget.Toast
@@ -24,15 +22,7 @@ class acceuil : AppCompatActivity() {
             v.setPadding(bars.left, bars.top, bars.right, bars.bottom)
             insets
         }
-        mapOf(
-            R.id.catEbooks to "E-Books",
-            R.id.catCategories to "Categories",
-            R.id.catAudio to "Audio Books",
-            R.id.catNovels to "Novels",
-            R.id.catMostRead to "Most Read"
-        ).forEach { (id, label) ->
-            findViewById<LinearLayout>(id).setOnClickListener { toast(label) }
-        }
+
 
         findViewById<TextView>(R.id.tvViewAll).setOnClickListener { toast("View All") }
 
