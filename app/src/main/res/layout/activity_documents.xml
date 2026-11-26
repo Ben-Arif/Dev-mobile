@@ -16,21 +16,39 @@
         android:layout_weight="1"
         android:orientation="vertical">
 
-        <!-- HEADER -->
+        <!-- Top bar -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/navy"
             android:gravity="center_vertical"
+            android:orientation="horizontal"
             android:padding="16dp">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Tunisia Smart Library"
+                android:layout_weight="1"
+                android:text=" Tunisia Smart Library"
                 android:textColor="@android:color/white"
                 android:textSize="18sp"
-                android:textStyle="bold"/>
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvregister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Register"
+                android:textColor="@color/gold"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvaccount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Account"
+                android:textColor="@color/gold"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <!-- TITLE -->
@@ -62,12 +80,26 @@
             android:orientation="vertical"
             android:paddingHorizontal="20dp">
 
-            <EditText
-                android:id="@+id/et_search"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="Search Documents..."
-                android:inputType="text"/>
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="3"
+                    android:hint="Search Documents..."
+                    android:inputType="text" />
+
+                <ImageButton
+                    android:id="@+id/btn_search"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    app:srcCompat="@android:drawable/ic_menu_search" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -122,7 +154,6 @@
             android:textSize="11sp"/>
 
         <TextView
-            android:id="@+id/navDocument"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -131,7 +162,7 @@
             android:gravity="center"
             android:text="📄&#10;Document"
             android:textColor="@color/gold"
-            android:textSize="11sp"/>
+            android:textSize="11sp" />
 
         <TextView
             android:layout_width="0dp"

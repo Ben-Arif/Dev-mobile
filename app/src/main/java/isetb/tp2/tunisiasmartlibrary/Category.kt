@@ -1,7 +1,11 @@
 package isetb.tp2.tunisiasmartlibrary
 
-data class Category(
+class Category(
     val id: Long,
     val name: String,
-)
+){
+    override fun toString(): String {
+        return name;
+    }
+}
 

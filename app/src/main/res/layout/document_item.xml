@@ -12,14 +12,13 @@
         android:id="@+id/img_doc"
         android:layout_width="match_parent"
         android:layout_height="250dp"
-        android:padding="15dp"
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/tv_title_doc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
+        android:padding="6dp"
         android:text="Title"
         android:textSize="20sp"
         android:textStyle="bold" />
@@ -28,7 +27,7 @@
         android:id="@+id/tv_discription_doc"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="10dp"
+        android:padding="6dp"
         android:text="description"
         android:textSize="16sp" />
 
@@ -36,13 +35,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:padding="6dp">
 
         <Button
-            android:id="@+id/btn_showMore_doc"
+            android:id="@+id/More"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Show more" />
+            android:text="more" />
 
         <View
             android:layout_width="0dp"
