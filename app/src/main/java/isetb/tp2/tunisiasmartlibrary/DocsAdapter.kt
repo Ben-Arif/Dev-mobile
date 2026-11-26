@@ -21,7 +21,7 @@ class DocsAdapter(
 
         val image = view.findViewById<ImageView>(R.id.img_doc)
         val title = view.findViewById<TextView>(R.id.tv_title_doc)
-        val discription = view.findViewById<TextView>(R.id.tv_discription_doc)
+        val description = view.findViewById<TextView>(R.id.tv_discription_doc)
         val showMore = view.findViewById<TextView>(R.id.btn_showMore_doc)
 
     }
@@ -44,7 +44,7 @@ class DocsAdapter(
             .into(holder.image)
 
         holder.title.text = document.title
-        holder.discription.text = document.discription
+        holder.description.text = document.description
 
         holder.showMore.setOnClickListener {
             onItemClick(document.id)

@@ -5,7 +5,7 @@ import java.util.Date
 data class Document(
     val id: Int,
     val auther: String,
-    val discription: String,
+    val description: String,
     val image: String,
     val stock: Int,
     val title: String,
