@@ -94,9 +94,9 @@ class DocumentsActivity : AppCompatActivity() {
 
 
         docsAdapter = DocsAdapter(documents){id ->
-            //val intent = Intent(this@DocumentsActivity, DocumentDetailsActivity::class.java)
-            //intent.putExtra("document_id", id)
-            //startActivity(intent)
+            val intent = Intent(this@DocumentsActivity, DocumentDetailsActivity::class.java)
+            intent.putExtra("document_id", id)
+            startActivity(intent)
         }
 
         rvDocs.adapter = docsAdapter
