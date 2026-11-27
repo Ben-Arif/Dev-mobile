@@ -36,7 +36,7 @@ class DocumentDetailsActivity : AppCompatActivity() {
             insets
         }
 
-        // 1. Récupérer les vues
+
         val img = findViewById<ImageView>(R.id.img_detail)
         val tvTitle = findViewById<TextView>(R.id.tv_detail_title)
         val tvAuthor = findViewById<TextView>(R.id.tv_detail_author)
@@ -45,10 +45,10 @@ class DocumentDetailsActivity : AppCompatActivity() {
         val tvDescription = findViewById<TextView>(R.id.tv_detail_description)
         val btnBack = findViewById<Button>(R.id.btn_back)
 
-        // 2. Récupérer l'id envoyé par l'activité précédente (0 = valeur par défaut)
+
         val documentId = intent.getIntExtra("document_id", 0)
 
-        // 3. Appeler l'API pour avoir les détails de ce document
+
         docService.getDocById(documentId)
             .enqueue(object : retrofit2.Callback<Document> {
                 override fun onResponse(
@@ -79,7 +79,7 @@ class DocumentDetailsActivity : AppCompatActivity() {
                 }
             })
 
-        // 4. Bouton retour : on ferme cette page, on revient à la liste
+
         btnBack.setOnClickListener {
             finish()
         }
