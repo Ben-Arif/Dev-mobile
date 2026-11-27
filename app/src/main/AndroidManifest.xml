@@ -15,15 +15,15 @@
         android:theme="@style/Theme.TunisiaSmartLibrary"
         android:usesCleartextTraffic="true">
         <activity
-            android:name=".login"
+            android:name=".auth.login"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".register"
+            android:name=".auth.register"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".acceuil"
+            android:name=".Activities.AcceuilActivity"
             android:exported="true"
             android:windowSoftInputMode="adjustResize">
             <intent-filter>
@@ -33,11 +33,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".DocumentsActivity"
+            android:name=".Activities.DocumentsActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
         <activity
-            android:name=".DocumentDetailsActivity"
+            android:name=".Activities.DocumentDetailsActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".auth.AccountActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustResize" />
     </application>
