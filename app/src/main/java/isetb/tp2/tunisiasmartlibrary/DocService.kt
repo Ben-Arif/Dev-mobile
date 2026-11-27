@@ -4,7 +4,9 @@ import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.Path
 import retrofit2.http.Query
+
 
 interface DocService {
     @GET("/api/categories")
@@ -17,6 +19,9 @@ interface DocService {
         @Query("categoryId") categoryId: Long? = null
     ): Call<List<Document>>
 
+
+    @GET("/api/documents/{id}")
+    fun getDocById(@Path("id") id: Int): Call<Document>
 
 
 }
