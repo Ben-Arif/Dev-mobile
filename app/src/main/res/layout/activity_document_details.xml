@@ -2,13 +2,19 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:elevation="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="20dp"
+        android:elevation="12dp"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="20dp"
+        android:stateListAnimator="@null"
+        android:verticalScrollbarPosition="defaultPosition"
+        android:background="@drawable/bg_border">
 
         <ImageView
             android:id="@+id/img_detail"
@@ -18,46 +24,227 @@
 
         <TextView
             android:id="@+id/tv_detail_title"
+            style="@style/MaterialAlertDialog.MaterialComponents.Title.Text.CenterStacked"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
+            android:padding="10dp"
+            android:text="Name"
             android:textSize="24sp"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/tv_detail_author"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/tv_detail_stock"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/tv_detail_date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/tv_detail_description"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:textSize="16sp" />
-
-        <Button
-            android:id="@+id/btn_back"
+        <LinearLayout
+            android:id="@+id/desc"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="Retour" />
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:paddingVertical="10dp">
+
+            <TextView
+                android:id="@+id/tv_detail_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <LinearLayout
+                android:layout_width="77dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Language"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Arabic"
+                    android:textColor="@color/gold"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="27dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Availablity"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/availablity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:textColor="@color/gold"
+                    android:textSize="18sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <Button
+                android:id="@+id/btn_order"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:paddingVertical="10dp"
+                android:text="Order now" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#00123E"
+            android:orientation="vertical"
+            android:padding="30dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Auther:" />
+
+                <TextView
+                    android:id="@+id/auther"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFDFD" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Publisher:" />
+
+                <TextView
+                    android:id="@+id/publisher"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:textColor="#FFFDFD" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Category :" />
+
+                <TextView
+                    android:id="@+id/category"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFDFD" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Publish Year :" />
+
+                <TextView
+                    android:id="@+id/publish_year"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#FFFDFD" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Book Type:" />
+
+                <TextView
+                    android:id="@+id/book_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:textColor="#FFFDFD" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="ISBN:" />
+
+                <TextView
+                    android:id="@+id/isbn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:textColor="#FFFDFD" />
+
+            </LinearLayout>
+
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>
